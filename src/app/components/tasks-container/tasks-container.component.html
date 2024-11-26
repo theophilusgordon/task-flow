@@ -1,0 +1,6 @@
+<div class="tasks-container">
+	@for(task of tasks; track task.id){
+		<app-task-container [title]="task.title" [counter]="task.counter">
+		</app-task-container>
+	}
+</div>

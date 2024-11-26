@@ -1,0 +1,22 @@
+.header {
+	background-color : #131A29;
+	display: flex;
+	justify-content: space-between;
+	padding-inline: 15%;
+	height: 10vh;
+	align-items: center;
+	border-bottom: 2px solid #4a5876;
+}
+
+h2 {
+	color: #f4f4f4;
+}
+
+button {
+	background-color: #4338CA;
+	color: #f4f4f4;
+	padding: 10px;
+	border: none;
+	border-radius: 5px;
+}
+
