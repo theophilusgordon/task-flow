@@ -1,0 +1,24 @@
+.task-item {
+	background-color: #f4f4f4;
+	color: #333;
+	padding: 5px;
+	border-radius: 5px;
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+}
+
+.task-header {
+	display: flex;
+	justify-content: space-between;
+}
+
+.task-description {
+	font-size: 12px;
+}
+
+.task-footer {
+	display: flex;
+	justify-content: space-between;
+	font-size: 14px;
+}

@@ -1,0 +1,9 @@
+.tasks-container {
+		background-color : #131A29;
+		height: 90vh;
+		padding-inline: 15%;
+		padding-block: 3rem;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 2rem;
+}
