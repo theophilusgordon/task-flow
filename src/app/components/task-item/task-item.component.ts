@@ -1,13 +1,16 @@
+import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
+import { Complexity } from '../tasks-container/tasks-container.component';
 
 @Component({
   selector: 'app-task-item',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './task-item.component.html',
   styleUrl: './task-item.component.css'
 })
 export class TaskItemComponent {
+  Complexity = Complexity;
 @Input() tasks: Task[] = [];
   // tasks:Task[] =[
   //     {
@@ -44,7 +47,7 @@ export class TaskItemComponent {
     console.log(this.tasks);
   }
 
-  
+
 }
 
 

@@ -31,34 +31,41 @@ export class TasksContainerComponent {
   tasks:Task[] =[
     {
       title: 'Task 1',
-      complexity: 'High',
+      complexity: Complexity.High,
       decriptions: 'Task 1 description',
       date: '2020-12-12',
       status: 'todo'
     },
     {
       title: 'Task 2',
-      complexity: 'Low',
+      complexity: Complexity.Low,
       decriptions: 'Task 2 description',
       date: '2020-12-12',
       status: 'in-progress'
     },
     {
       title: 'Task 3',
-      complexity: 'Medium',
+      complexity: Complexity.Medium,
       decriptions: 'Task 3 description',
       date: '2020-12-12',
       status: 'completed',
     },
     {
       title: 'Task 4',
-      complexity: 'Medium',
+      complexity: Complexity.Medium,
       decriptions: 'Task 4 description',
       date: '2020-12-12',
       status: 'todo'
     }
 ];
 
+
+}
+
+export enum Complexity {
+  High = 'High',
+  Medium = 'Medium',
+  Low = 'Low',
 }
 
 type TaskContainer = {

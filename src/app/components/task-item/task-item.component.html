@@ -3,7 +3,11 @@
 	<div class="task-item">
 		<div class="task-header">
 			<h4>{{task.title}}</h4>
-			<div class="complexity" [class] = "task.complexity.toLowerCase()">
+			<div class="complexity" [ngClass]="{
+				'high': task.complexity === Complexity.High,
+				'medium': task.complexity === Complexity.Medium,
+				'low': task.complexity === Complexity.Low,
+			}">
 				{{task.complexity}}
 			</div>
 		</div>
