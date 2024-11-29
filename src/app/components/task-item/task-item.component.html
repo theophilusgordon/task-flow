@@ -1,21 +1,25 @@
-<div class="task-item">
-	<div class="task-header">
-		<h4>Title</h4>
-		<div class="complexity">
-			medium
+@for (task of tasks; track $index) {
+
+	<div class="task-item">
+		<div class="task-header">
+			<h4>{{task.title}}</h4>
+			<div class="complexity" [class] = "task.complexity.toLowerCase()">
+				{{task.complexity}}
+			</div>
+		</div>
+		<div class="task-description">
+			{{task.decriptions}}
+		</div>
+		<div class="task-footer">
+			<p class="date">
+				{{task.date}}
+			</p>
+			<select name="status" id="status">
+				<option value="todo" [selected]="task.status ==='todo'">To Do</option>
+				<option value="in-progress" [selected]="task.status ==='in-progress'">In-progress</option>
+				<option value="completed" [selected]="task.status ==='completed'">Completed</option>
+			</select>
 		</div>
 	</div>
-	<div class="task-description">
-		Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam possimus eligendi!
-	</div>
-	<div class="task-footer">
-		<p class="date">
-			26/11/24
-		</p>
-		<select name="status" id="status">
-			<option value="todo">To Do</option>
-			<option value="in-progress">In-progress</option>
-			<option value="todo">Completed</option>
-		</select>
-	</div>
-</div>
+
+}

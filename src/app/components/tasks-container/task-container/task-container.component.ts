@@ -10,5 +10,24 @@ import { TaskItemComponent } from "../../task-item/task-item.component";
 })
 export class TaskContainerComponent {
 	@Input() title: string = '';
+  @Input() id: string = '';
 	@Input() counter: number = 0;
+  @Input() tasks: Task[] = [];
+  
+  getTaskStatus(status: string) {
+     return this.tasks.filter(task => task.status === status);
+  }
+
+  ngOnInit(): void {
+    console.log('h',
+       this.tasks, this.id);
+  }
+
+}
+interface Task {
+  title: string,
+  complexity: string,
+  decriptions: string,
+  date: string,
+  status: 'todo' | 'in-progress' | 'completed'
 }

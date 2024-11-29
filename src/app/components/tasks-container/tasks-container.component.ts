@@ -9,27 +9,68 @@ import { TaskContainerComponent } from "./task-container/task-container.componen
   styleUrl: './tasks-container.component.css',
 })
 export class TasksContainerComponent {
-  tasks: Task[] = [
+  taskContainers: TaskContainer[] = [
     {
-      id: 1,
+      id: 'todo',
       title: 'To Do',
       counter: 2,
     },
     {
-      id: 2,
+      id: 'in-progress',
       title: 'In Progress',
       counter: 1,
     },
     {
-      id: 3,
+      id: 'completed',
       title: 'Completed',
       counter: 9,
     },
   ];
+
+  
+  tasks:Task[] =[
+    {
+      title: 'Task 1',
+      complexity: 'High',
+      decriptions: 'Task 1 description',
+      date: '2020-12-12',
+      status: 'todo'
+    },
+    {
+      title: 'Task 2',
+      complexity: 'Low',
+      decriptions: 'Task 2 description',
+      date: '2020-12-12',
+      status: 'in-progress'
+    },
+    {
+      title: 'Task 3',
+      complexity: 'Medium',
+      decriptions: 'Task 3 description',
+      date: '2020-12-12',
+      status: 'completed',
+    },
+    {
+      title: 'Task 4',
+      complexity: 'Medium',
+      decriptions: 'Task 4 description',
+      date: '2020-12-12',
+      status: 'todo'
+    }
+];
+
 }
 
-type Task = {
-	id: number;
+type TaskContainer = {
+	id: string;
 	title: string;
 	counter: number;
+}
+
+interface Task {
+  title: string,
+  complexity: string,
+  decriptions: string,
+  date: string,
+  status: 'todo' | 'in-progress' | 'completed'
 }
